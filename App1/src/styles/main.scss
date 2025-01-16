@@ -1,0 +1,52 @@
+$button-bg-color: #4CAF50;
+$button-text-color: #fff;
+$button-hover-bg-color: #45a049;
+$button-border-radius: 4px;
+$button-padding : 8px;
+$button-font-size: 10px;
+$black-border: #000;
+
+%css-scroll-shared{
+  height: 450px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+@function calc-padding($padding) {
+  @return $padding * 1.2;
+}
+
+.primary-button {
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  padding: calc-padding($button-padding);
+  font-size: $button-font-size;
+  border: none;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}
+
+
+.listContainer{
+  .scrollContainer{
+    @extend %css-scroll-shared;
+    li {
+      width: 100%;
+      border: 1px solid $black-border;
+      margin-top: 5px;
+    }
+  }
+}
+
+
+.dashboardContainer{
+  .favorites-container{
+    @extend %css-scroll-shared;
+    ul {
+      padding-left: 20px;
+    }
+  }
+}
